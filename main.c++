@@ -32,6 +32,7 @@ void setup() {
   pinMode(BTN_STMENU, INPUT);
   pinMode(LED_PLAY, OUTPUT);
   pinMode(LED_STOP, OUTPUT);
+  pinMode(BUZZER, OUTPUT);
   telaInicial();
   mostrarMenu();
 }
@@ -45,16 +46,65 @@ void telaInicial() {
   delay(2000);
 }
 
-void tocar_musica(){
+void tocarMusica(){
 
 }
 
 void  mostrarMenu(){
+  lcd.clear();
+  lcd.setCursor(0,0);
+  lcd.print("Selecione:");
 
+  lcd.setCursor(0,1);
+  lcd.print(nomes[musicaAtual]);
 }
-void lerMenu() {}
+
+void lerMenu() {
+ // next
+  if(digitalRead(BTN_UP) == HIGH) {
+    musicaAtual++;
+    if(musicaAtual > 4) {
+        musicaAtual = 0;
+    }
+    delay(200);
+  }
+
+  // back
+  if(digitalRead(BTN_DOWN) == HIGH) {
+    musicaAtual--;
+    if(musicaAtual < 0) {
+        musicaAtual = 4;
+    }
+    delay(200);
+  }
+	
+  //play e pause
+  if(digitalRead(BTN_PLAY) == HIGH) {
+  	if(estadoMusica == 0) {
+    	estadoMusica = 1; // começa a tocar
+  	} 
+  	else if(estadoMusica == 1) {
+    	estadoMusica = 2; // pausa
+  	} 
+  	else if(estadoMusica == 2) {
+    	estadoMusica = 1; // volta a tocar
+  	}
+	delay(300);
+  }
+  
+  //volta ao menu de boas vindas
+  if(digitalRead(BTN_STMENU) == HIGH) {
+    estadoMusica = 0;
+
+    digitalWrite(LED_PLAY, LOW);
+    digitalWrite(LED_STOP, LOW);
+    telaInicial();   // volta pro "Bem vindo"
+    mostrarMenu();   // depois menu 
+    delay(300);
+  }
+}
 
 void loop() {
   lerMenu();
-  tocar_musica();
+  tocarMusica();
 }
