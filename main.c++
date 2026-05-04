@@ -17,8 +17,7 @@ LiquidCrystal lcd(7,6,5,4,3,2);
 #define BUZZER 12
 
 /*mario
-
-- /
+*/
 
 int estadoMusica = 0;
 
@@ -150,7 +149,7 @@ int* musicas[] = {mario, zelda, tetris, pokemon, starwars};
 
 int* duracoes[] = {duracaoMario, duracaoZelda, duracaoTetris, duracaoPokemon, duracaoStarWars};
 
-int tamanhos[] = {10, 10};
+int tamanhos[] = {27, 18, 18, 12, 16};
 
 void setup() {
 
@@ -344,23 +343,45 @@ delay(300);
 
 }
 
+if(digitalRead(BTN_STMENU) == HIGH) {
+
+estadoMusica = 0;
+
+noTone(BUZZER);
+
+musica();
+
+delay(300);
+
+}
+
 }
 
 bool musica() {
 
 int tamanho = tamanhos[musicaAtual];
 
-estadoMusica=1;
-
 for(int i = 0; i < tamanho; i++) {
 
 ```
+if(digitalRead(BTN_PLAY) == HIGH) {
+estadoMusica = 2;
+noTone(BUZZER);
+
+digitalWrite(LED_PLAY, HIGH);
+digitalWrite(LED_STOP, LOW);
+
+delay(300);
+return false;
+}
+
 if(digitalRead(BTN_STMENU) == HIGH) {
-  estadoMusica = 2; // pausa
-  noTone(BUZZER);
-  digitalWrite(LED_STOP, HIGH);
-  delay(100);
-  return false;
+    estadoMusica = 0;
+    noTone(BUZZER);
+    digitalWrite(LED_PLAY, LOW);
+    digitalWrite(LED_STOP, HIGH);
+    delay(300);
+
 }
 
 tone(BUZZER, musicas[musicaAtual] [i]);   // (corrigi aqui também!)
