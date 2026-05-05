@@ -1,6 +1,5 @@
 #include <LiquidCrystal.h>
 
-
 LiquidCrystal lcd(7,6,5,4,3,2);
 
 #define BTN_UP 9
@@ -115,7 +114,6 @@ void telaInicial() {
   delay(2000);
 }
 
-
 void mostrarMenu() {
   lcd.clear();
   lcd.setCursor(0,0);
@@ -125,11 +123,8 @@ void mostrarMenu() {
   lcd.print(nomes[musicaAtual]);
 }
 
-
 void tocar_musica(){
-	
-
-  // atualiza o LCD só Quando muda)
+  // atualiza o LCD só Quando muda
   //utilizei algumas variaveis de "estado" pois estava
   //dando bugs de visualização
   if(estadoMusica != ultimoEstado || musicaAtual != ultimaMusica){
@@ -237,13 +232,13 @@ bool musica() {
     }
 
     if(digitalRead(BTN_STMENU) == HIGH) {
-        estadoMusica = 2;
+        estadoMusica = 0;
         noTone(BUZZER);
         delay(300);
         return false;     
     }
 
-    tone(BUZZER, musicas[musicaAtual] [i]);   // (corrigi aqui também!)
+    tone(BUZZER, musicas[musicaAtual] [i]);  
     delay(duracoes[musicaAtual][i]);
     noTone(BUZZER);
     delay(50);
@@ -251,8 +246,6 @@ bool musica() {
 
   return true;
 }
-
-
 
 void loop() {
   lerMenu();
