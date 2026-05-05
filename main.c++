@@ -233,6 +233,8 @@ bool musica() {
 
     if(digitalRead(BTN_STMENU) == HIGH) {
         estadoMusica = 0;
+		telaInicial(); 
+   		mostrarMenu();
         noTone(BUZZER);
         delay(300);
         return false;     
