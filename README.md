@@ -117,7 +117,7 @@ Ao pressionar STOP:
 
 ### Demonstração em Vídeo
 Link para o video no youtube: https://youtu.be/7LqwHXfK1y4
-Link demonstração:
+Link demonstração: https://youtube.com/shorts/OijTaJJcl6A?si=Htwxb54Olx5JfM8m
 ---
 
 ## Tecnologias Utilizadas
