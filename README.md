@@ -58,7 +58,7 @@ O display LCD foi controlado utilizando a biblioteca `LiquidCrystal`, sendo resp
 
 ## Imagem do Circuito
 <div align="center">
-  <img  width="770" height="405" alt="image" src="https://github.com/user-attachments/assets/60020c7e-5e19-4dda-8a54-eb2d4f75e75d" />
+  <img  width="770" height="405" alt="image" src="WhatsApp Image 2026-05-08 at 20.36.42.jpeg" />
 </div>
 
 <br>
@@ -69,7 +69,7 @@ O display LCD foi controlado utilizando a biblioteca `LiquidCrystal`, sendo resp
 
 Ao iniciar, o display apresenta uma mensagem de boas-vindas:
 <div align="center">
-  <img width="770" height="405" alt="image" src="https://github.com/user-attachments/assets/d9038014-4d65-4b2b-ac75-baaa284eb66b" />
+  <img width="770" height="405" alt="image" src="WhatsApp Image 2026-05-08 at 20.36.43 (1).jpeg" />
 </div>
 
 <br>
@@ -78,7 +78,7 @@ Ao iniciar, o display apresenta uma mensagem de boas-vindas:
 
 O usuário pode navegar entre as músicas utilizando os botões UP e DOWN:
 <div align="center">
-  <img width="770" height="405" alt="image" src="https://github.com/user-attachments/assets/36eac930-0c21-4030-abb5-6606101365c3" />
+  <img width="770" height="405" alt="image" src="WhatsApp Image 2026-05-08 at 20.36.42 (1).jpeg" />
 </div>
 
 <br>
@@ -90,7 +90,7 @@ Ao pressionar o botão PLAY:
 * A música começa a tocar no buzzer
 * LED verde é ativado
 <div align="center">
-  <img width="770" height="405" alt="image" src="https://github.com/user-attachments/assets/ee546828-e775-47da-b403-693cb495fb5a" />
+  <img width="770" height="405" alt="image" src="WhatsApp Image 2026-05-08 at 20.36.43.jpeg" />
 </div>
 
 <br>
@@ -103,7 +103,7 @@ Ao pressionar PLAY novamente:
 * LED vermelho é ativado
   
 <div align="center">
-  <img width="770" height="405" alt="image" src="https://github.com/user-attachments/assets/69291f91-cd25-4137-ada6-39d60a60323d" />
+  <img width="770" height="405" alt="image" src="WhatsApp Image 2026-05-08 at 20.36.44.jpeg" />
 </div>
 
 <br>
